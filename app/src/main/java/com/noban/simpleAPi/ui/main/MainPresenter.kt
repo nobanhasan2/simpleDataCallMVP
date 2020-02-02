@@ -16,6 +16,7 @@ class MainPresenter (val mainView: MainView,val repository: Repository) {
     }
     fun onSuccess(rpData: List<RPData>){
          Log.e("Data",rpData.get(0).title)
+        mainView.loadDataInUI(rpData)
     }
 
     fun onError(throwable: Throwable){

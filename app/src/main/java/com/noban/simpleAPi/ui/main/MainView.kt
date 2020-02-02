@@ -1,4 +1,8 @@
 package com.noban.simpleAPi.ui.main
 
-interface MainViewgit {
+import com.noban.simpleAPi.model.RPData
+
+interface MainView {
+
+    fun loadDataInUI(rpData: List<RPData>)
 }
