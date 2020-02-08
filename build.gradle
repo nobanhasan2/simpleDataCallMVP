@@ -11,7 +11,7 @@ buildscript {
     ext.dartVersion = "2.0.3"
     ext.anko_version = '0.10.8'
     ext.androidx_core_version = '1.0.1'
-    ext.glideVersion = '4.8.0'
+    ext.glideVersion = '4.9.0'
     ext.butterKnifeVersion = '10.0.0'
     repositories {
         google()

@@ -8,6 +8,7 @@ import com.noban.simpleAPi.core.api.Repository
 import com.noban.simpleAPi.core.base.BaseActivity
 import com.noban.simpleAPi.model.RPData
 import com.noban.simpleAPi.ui.main.adapter.RecycleDataAdapter
+import com.noban.simpleAPi.utility.DividerItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() ,MainView{
@@ -23,12 +24,11 @@ class MainActivity : BaseActivity() ,MainView{
         mPresenter = MainPresenter(this,mRepository)
         mPresenter.getData()
 
-
-
     }
 
     override fun loadDataInUI(rpData: List<RPData>) {
-        mAdapter = RecycleDataAdapter(rpData)
+        rv_photo.addItemDecoration(DividerItemDecoration(2,10,true))
+        mAdapter = RecycleDataAdapter(rpData,this)
         rv_photo.layoutManager = GridLayoutManager(this,2)
         rv_photo.adapter = mAdapter
 
